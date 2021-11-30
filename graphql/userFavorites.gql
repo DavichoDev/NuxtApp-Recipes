@@ -1,0 +1,18 @@
+query($id:ID!){
+  user(id:$id){
+    favorites{
+      id
+      name
+      img
+      likes
+      category{
+        id
+        name
+        slug
+      }
+      author{
+        username
+      }
+    }
+  }
+}

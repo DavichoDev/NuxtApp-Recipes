@@ -1,0 +1,16 @@
+query($slug: String!){
+  recipes(where:{category:{slug:$slug}}){
+    id
+    name
+    img
+    likes
+    category{
+      id
+      name
+      slug
+    }
+    author{
+      username
+    }
+  }
+}
